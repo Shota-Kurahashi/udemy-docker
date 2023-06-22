@@ -67,3 +67,8 @@ ARG <変数名>=<デフォルト値>
 ```bash
 docker image build --build-arg <変数名>=<値> -t <イメージ名>:<タグ> <Dockerfileのパス>
 ```
+
+### ARG と ENV の違い
+
+- ARG は docker build 時に指定する変数
+- ARG は イメージ作成時のみの一時的の変数
