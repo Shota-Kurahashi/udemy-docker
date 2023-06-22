@@ -33,3 +33,9 @@ COPY <コピー元> <コピー先>
 ```bash
 docker image build -t <イメージ名>:<タグ> -f <Dockerfileのパス>　<build contextパス>
 ```
+
+## CMD -> コンテナ実行時のデフォルトコマンドを指定する
+
+```dockerfile
+CMD ["echo", "hello world"]
+```
