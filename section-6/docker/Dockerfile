@@ -1,8 +1,5 @@
-FROM ubuntu:20.04
+FROM rails:5
 
-RUN apt update
-RUN apt install -y curl
+RUN touch hege.txt
 
-COPY . /app/
-
-CMD ["ls", "-la"]
+CMD [ "ls","-la" ]
