@@ -1,12 +1,14 @@
 FROM ubuntu:20.04
 
-ENV hello="Hello World"
+RUN touch 1.txt
 
-ARG message_arg="Message Arg"
-ENV env="Message Env"
+WORKDIR /app/my_dir
 
-RUN echo $message_arg > message_arg.txt
-RUN echo $env > message_env.txt
+RUN touch 2.txt
+
+WORKDIR /app
+
+RUN touch 3.txt
 
 CMD ["bash"]
 

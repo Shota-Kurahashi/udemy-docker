@@ -72,3 +72,9 @@ docker image build --build-arg <変数名>=<値> -t <イメージ名>:<タグ> <
 
 - ARG は docker build 時に指定する変数
 - ARG は イメージ作成時のみの一時的の変数
+
+### 作業ディレクトリの指定
+
+```dockerfile
+WORKDIR <作業ディレクトリ>
+```
