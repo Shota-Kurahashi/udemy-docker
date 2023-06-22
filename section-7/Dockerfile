@@ -1,18 +1,14 @@
-# コンパイル
-FROM gcc:12.2.0 AS compiler
+# 共通部分
+FROM ubuntu:20.04 AS base
 
-WORKDIR /app
+RUN apt update 
 
-COPY ./hello.c .
+CMD [ "sh" ,"-c","echo My name is $my_name" ]
 
-RUN gcc hello.c
+# dev -> TEST  prod -> Bob
 
-# 実行
+FROM base AS production
+ENV my_name=Bob
 
-FROM ubuntu:20.04
-
-WORKDIR /app
-
-COPY --from=compiler /app/a.out .
-
-CMD ["./a.out"]
+FROM base AS development
+ENV my_name=TEST 
