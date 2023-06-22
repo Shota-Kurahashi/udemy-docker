@@ -1,5 +1,4 @@
-FROM rails:5
+FROM ubuntu:20.04
 
-RUN touch hege.txt
+ENV hello="Hello World"
 
-CMD [ "ls","-la" ]

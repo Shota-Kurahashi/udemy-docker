@@ -45,3 +45,9 @@ CMD ["echo", "hello world"]
 ```bash
 docker image history <イメージ名>:<タグ>
 ```
+
+###　環境変数の設定
+
+```dockerfile
+ENV <環境変数名>=<値>
+```
