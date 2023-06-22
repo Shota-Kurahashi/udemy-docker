@@ -51,3 +51,19 @@ docker image history <イメージ名>:<タグ>
 ```dockerfile
 ENV <環境変数名>=<値>
 ```
+
+### ARG -> docker build 時に指定する変数
+
+```dockerfile
+ARG <変数名>
+
+or
+
+ARG <変数名>=<デフォルト値>
+```
+
+### 変数を渡しながら docker build
+
+```bash
+docker image build --build-arg <変数名>=<値> -t <イメージ名>:<タグ> <Dockerfileのパス>
+```
